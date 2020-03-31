@@ -6,6 +6,7 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 
 import Button from '../components/Button';
 import ProfileAvatar from '../components/Avatar';
+import Link from '../components/links';
 
 const AccountSettings = props => {
   return (
@@ -14,23 +15,24 @@ const AccountSettings = props => {
       <ProfileAvatar />
       {/* links  */}
       <View style={styles.sectionContainer}>
-        <TouchableOpacity
-          activeOpacity={0.8}
-          style={styles.editprofileContainer}
-          onPress={() => {
-            props.navigation.navigate('EditProfile');
-            // props.navigation.navigate({
-            //   routename: 'EditProfile', 
-            // });
-          }}>
-          <Text style={styles.profileText}>Edit Profile</Text>
-          <Icon
-            name="keyboard-arrow-right"
-            size={20}
-            color="#262626"
-            style={styles.arrow}
-          />
-        </TouchableOpacity>
+        {/* <TouchableOpacity
+        //   activeOpacity={0.8}
+        //   style={styles.editprofileContainer}
+        //   onPress={() => {
+        //     props.navigation.navigate('EditProfile');
+        //   }}>
+        //   <Text style={styles.profileText}>Edit Profile</Text>
+        //   <Icon
+        //     name="keyboard-arrow-right"
+        //     size={20}
+        //     color="#262626"
+        //     style={styles.arrow}
+        //   />
+        // </TouchableOpacity>*/}
+        <Link
+          name="Edit Profile"
+          pressTo={() => props.navigation.navigate('EditProfile')}
+        />
 
         <TouchableOpacity
           activeOpacity={0.8}
@@ -108,6 +110,9 @@ const styles = StyleSheet.create({
     fontSize: 16,
     flexDirection: 'row',
     justifyContent: 'space-between',
+  },
+  profileText: {
+    fontFamily: 'Montserrat-Bold',
   },
 });
 
