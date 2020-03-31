@@ -26,4 +26,4 @@ const AccountSettingsNavigator = createStackNavigator(AccountNavigator, {
   initialRouteName: 'TransactionHistory',
 });
 
-export default createAppContainer(AccountSettingsNavigator)v b;
+export default createAppContainer(AccountSettingsNavigator);
