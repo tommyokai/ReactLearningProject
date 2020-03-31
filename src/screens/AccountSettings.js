@@ -18,9 +18,10 @@ const AccountSettings = props => {
           activeOpacity={0.8}
           style={styles.editprofileContainer}
           onPress={() => {
-            props.navigation.navigate({
-              routename: 'EditProfile',
-            });
+            props.navigation.navigate('EditProfile');
+            // props.navigation.navigate({
+            //   routename: 'EditProfile', 
+            // });
           }}>
           <Text style={styles.profileText}>Edit Profile</Text>
           <Icon
@@ -31,7 +32,12 @@ const AccountSettings = props => {
           />
         </TouchableOpacity>
 
-        <TouchableOpacity activeOpacity={0.8} style={styles.profileContainer}>
+        <TouchableOpacity
+          activeOpacity={0.8}
+          style={styles.profileContainer}
+          onPress={() => {
+            props.navigation.navigate('Password');
+          }}>
           <Text style={styles.profileText}>Change Password</Text>
           <Icon
             name="keyboard-arrow-right"
@@ -41,7 +47,12 @@ const AccountSettings = props => {
           />
         </TouchableOpacity>
 
-        <TouchableOpacity activeOpacity={0.8} style={styles.tranhisContainer}>
+        <TouchableOpacity
+          activeOpacity={0.8}
+          style={styles.tranhisContainer}
+          onPress={() => {
+            props.navigation.navigate('TransactionHistory');
+          }}>
           <Text style={styles.profileText}>Transaction History</Text>
           <Icon
             name="keyboard-arrow-right"
