@@ -1,33 +1,61 @@
 /* eslint-disable prettier/prettier */
 import React, {Component} from 'react';
-import {Text, View, StyleSheet, TouchableOpacity} from 'react-native';
-import {Avatar} from 'react-native-elements';
-import Icon from 'react-native-vector-icons/MaterialIcons';
-
+import {View, StyleSheet, SafeAreaView, ScrollView} from 'react-native';
+// component imports
 import Button from '../components/Button';
 import TextField from '../components/TextInput';
 
 const App = () => {
   return (
-    <View style={styles.screen}>
-      <TextField title="First Name" />
-      <TextField title="Last Name" />
-      <TextField title="Region" />
-      <TextField title="City" />
-      <TextField title="Address Line 1" />
-      <TextField title="Address Line 2" />
-      {/* button prop */}
-      <Button title="Save Changes" style={styles.btn} />
-    </View>
+    <SafeAreaView style={styles.container}>
+      <ScrollView style={styles.scrollContainer}>
+        <View style={styles.screen}>
+          {/* First name */}
+          <View style={styles.textFieldContainer}>
+            <TextField title="First Name" />
+          </View>
+          {/* Last Name */}
+          <View style={styles.textFieldContainer}>
+            <TextField title="Last Name" />
+          </View>
+          {/* Region */}
+          <View style={styles.textFieldContainer}>
+            <TextField title="Region" />
+          </View>
+          {/* City */}
+          <View style={styles.textFieldContainer}>
+            <TextField title="City" />
+          </View>
+          {/* Address Line 1 */}
+          <View style={styles.textFieldContainer}>
+            <TextField title="Address Line 1" />
+          </View>
+          {/* Adress Line 2 */}
+          <View style={styles.textFieldContainer}>
+            <TextField title="Address Line 2" />
+          </View>
+          {/* button prop */}
+          <Button title="Save Changes" style={styles.btn} />
+        </View>
+      </ScrollView>
+    </SafeAreaView>
   );
 };
 
 const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+  scrollContainer: {
+    flex: 1,
+    backgroundColor: 'white',
+  },
   screen: {
     flex: 1,
     backgroundColor: 'white',
-    justifyContent: 'space-between',
+    paddingHorizontal: 15,
   },
+  textFieldContainer: {marginVertical: 10},
 });
 
 export default App;

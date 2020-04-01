@@ -1,8 +1,6 @@
 /* eslint-disable prettier/prettier */
 import React, {Component} from 'react';
-import {Text, View, StyleSheet, TouchableOpacity} from 'react-native';
-import {Avatar} from 'react-native-elements';
-import Icon from 'react-native-vector-icons/MaterialIcons';
+import {View, StyleSheet} from 'react-native';
 
 import Button from '../components/Button';
 import TextField from '../components/TextInput';
@@ -10,9 +8,15 @@ import TextField from '../components/TextInput';
 const App = () => {
   return (
     <View style={styles.screen}>
-      <TextField title="Old Password" />
-      <TextField title="New Password" />
-      <TextField title="Retype Password" />
+      <View style={styles.textFieldContainer}>
+        <TextField title="Old Password" />
+      </View>
+      <View style={styles.textFieldContainer}>
+        <TextField title="New Password" />
+      </View>
+      <View style={styles.textFieldContainer}>
+        <TextField title="Retype Password" />
+      </View>
       {/* button prop */}
       <View style={styles.btn}>
         <Button title="Save Changes" />
@@ -25,9 +29,13 @@ const styles = StyleSheet.create({
   screen: {
     flex: 1,
     backgroundColor: 'white',
+    paddingHorizontal: 15,
+  },
+  textFieldContainer: {
+    marginVertical: 10,
   },
   btn: {
-    marginVertical: 60,
+    marginVertical: 40,
   },
 });
 

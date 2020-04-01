@@ -13,21 +13,25 @@ const TextField = props => {
 const styles = StyleSheet.create({
   fieldContainer: {
     marginVertical: 10,
-    marginHorizontal: 20,
-    height: 50,
+    height: 40,
   },
   textContainer: {
     color: '#262626',
     fontFamily: 'Montserrat-Regular',
     paddingVertical: 7,
-    fontSize: 12,
+    fontSize: 14,
   },
   mainField: {
-    backgroundColor: '#FAFAFA',
+    backgroundColor: '#fff',
+    borderWidth: 1,
+    borderColor: '#262626',
+    borderRadius: 5,
     justifyContent: 'center',
     alignItems: 'center',
     paddingHorizontal: 10,
     fontFamily: 'Montserrat-Regular',
+    fontSize: 14,
+    opacity: 0.3,
   },
 });
 

@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
   buttonContainer: {
     backgroundColor: '#262626',
     marginVertical: 30,
-    marginHorizontal: 40,
+    marginHorizontal: 15,
     height: 50,
     justifyContent: 'center',
     alignItems: 'center',
@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     paddingVertical: 10,
     textTransform: 'uppercase',
-    fontFamily: 'Montserrat-Medium.ttf',
+    fontFamily: 'Montserrat-Bold',
     fontSize: 16,
   },
 });
