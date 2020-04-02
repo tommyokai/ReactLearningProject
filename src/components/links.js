@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
   },
   menuText: {
     fontSize: 16,
-    fontFamily: 'Montserrat-Bold',
+    fontFamily: 'Montserrat-ExtraBold',
     color: '#262626',
   },
 });
