@@ -6,7 +6,7 @@ import Slider from '@react-native-community/slider';
 import Button from '../components/Button';
 import Filter from '../components/Filter';
 
-const HistoryFilter = props => {
+const HistoryFilter = (props) => {
   return (
     <View style={styles.screen}>
       <View style={styles.filterContainer}>
